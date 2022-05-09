@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interesting Paintings</title>
+        <style>
+            body {
+                margin: 0;
+                overflow: hidden;
+            }
+            svg {
+                width: 960px;
+                height: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <svg>
+            <defs>
+                <!--sky gradient-->
+                <linearGradient
+                id="skyGradient"
+                x1="100%"
+                y1="100%">
+                <stop offset="0%" stop-color="lightblue" stop-opacity="0.5">
+                    <animate attributeName="stop-color"
+                    values="lightblue;blue; red; red; black; red; red; purple; lightblue"
+                    dur="14s" repeatCount="indefinite"/>
+                </stop>
+                <stop offset="100%" stop-color="lightblue" stop-opacity="0.5">
+                    <animate attributeName="stop-color" values="lightblue;orange;purple;purple;orange;purple;purple;blue;lightblue"
+                    dur="24s" repeatCount="indefinite"/>
+                    <animate attributeName="offset"
+                    value="0.95;0.80;0.60;0.40;0.20;0;0.20;0.40;0.60;0.80;0.95"
+                    dur="24s"
+                    repeatCount="indefinite"/>
+                </stop>
+                </linearGradient>
+                <!--Mountain Gradient-->
+                <linearGradient
+                id ="mountainGradient"
+                x1="100%"
+                y1="100%">
+                <stop offset="0%"
+                stop-color="#024b30"
+                stop-opacity="1">
+                <animate attributeName="stop-color" values="lightgreen;green;darkgreen;darkgreen;black;green;green;darkgreen;lightgreen"
+                dur="24s"
+                repeatCount="indefinite"/>
+                </stop>
+                <stop offset="100%" stop-color="#024b30" stop-opactiy="0.8">
+                    <animate attributeName="stop-color" values="#024b30; green;darkgreen;darkgreen; black; green;#024b30; darkgreen; #024b30" dur="24s" repeatCount="indefinite"/>
+                    <animate attributeName="offset" values="0.95;0.80;0.60;0.40;0.20;0;0.20;0.40;0.60;0.80;0.95" dur="24s" repeatCount="indefinite"/>
+                </stop>
+            </linearGradient>
+            <!--Sun-->
+            <linearGradient id="Sun" gradientTransform="rotate(90">
+                <stop offset="5%" stop-color="gold"/>
+                <stop offset="95%" stop-color="red"/>
+            </linearGradient>
+            <!--Water Body Gradient-->
+            <linearGradient id="waterGradient"
+            x1="0"
+            x2="1"
+            y1="0"
+            y2="0">
+            <stop offset="0%" stop-color="skyblue">
+                <animate attributeName="stop-color" values="blue; darkblue; blue; blue; lightblue; blue; darkblue"
+                dur="24s" repeatCount="indefinite"/>
+                <!--<animate attributeName="stop-color" values="skyblue; red; orange; yellow; grey; orange;red;black" dur="24s" repeatCount="indefinite"/>-->
+            </stop>
+            <stop offset="50%"
+            stop-color="black"
+            stop-opacity="0.2"/>
+            <stop offset="100%" stop-color="skyblue">
+                <animate attributeName="stop-color" values="blue; darkblue; blue; blue; lightblue; blue; darkblue"
+                dur="24s" repeatCount="indefinite"/>
+            </stop>
+            </linearGradient>
+            </defs>
+            <!--======================================-->
+            <rect width="960" height="350" fill="url(#skyGradient)"/>
+            <circle r="80" fill="url(#Sun)" cx="350" cy="100" opacity="1">
+            <animate attributeName="cy" values="-100; 100; 200; 350; 400; 330; 200; 100; 0; -100" dur="24s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="1; 0.5; 0.4; 0.3; 0.2; 0; 0.001; 0.1; 0.2; 0.22; 0.2; 0.3; 0.5; 1" dur="24s" repeatCount="indefinite"/>
+            </circle>
+            <path d="M 0 350 C 200 180 100 300 360 350"
+            stroke="transparent"
+            fill="url(#mountainGradient)"></path>
+            <path d="M 100 450 C 250 380 350 450 500 450" stroke="transparent" fill="url(#mountainGradient)"></path>
+            <path d="M 950 410 C 650 400 750 350 990 370" stroke="transparent" fill="url(#mountainGradient)"></path>
+            <rect y="350" width="960" height="200" fill="url(#waterGradient)"></rect>
+            <g transform="translate(500, 10)"
+            fill="white"
+            stroke="white"
+            stroke-width="20"
+            stroke-opacity="0.4"
+            opacity="0.7">
+            <circle cx="40" cy="40" r="20" />
+            <circle cx="60" cy="60" r="25" />
+            <circle cx="70" cy="70" r="15" />
+            <circle cx="100" cy="40" r="25" />
+            <circle cx="100" cy="70" r="20" />
+            <circle cx="130" cy="40" r="15" />
+            <animate
+              attributeName="fill"
+              values="white;grey;white"
+              dur="20s"
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="stroke"
+              values="white;grey;white"
+              dur="20s"
+              repeatCount="indefinite"
+            />
+          </g>
+          <g
+          transform="translate(850,150)"
+          fill="white"
+          stroke="white"
+          stroke-width="20"
+          stroke-opacity="0.4"
+          opacity="0.7"
+        >
+          <circle cx="40" cy="40" r="20" />
+          <circle cx="60" cy="60" r="25" />
+          <circle cx="70" cy="70" r="15" />
+          <circle cx="100" cy="40" r="25" />
+          <circle cx="100" cy="70" r="20" />
+          <circle cx="130" cy="40" r="15" />
+          <animate
+            attributeName="fill"
+            values="white;grey;white"
+            dur="20s"
+            repeatCount="indefinite"
+          />
+          <animate
+            attributeName="stroke"
+            values="white;grey;white"
+            dur="20s"
+            repeatCount="indefinite"
+          />
+        </g>
+        <line x1="100"
+        x2="10"
+        y1="200"
+        y2="100"
+        stroke="black"></line>
+        <path d="M 50 550 L 50 -10" fill="none" stroke-width="30" stroke="#654321"></path>
+        <path d="M 50 500 L 80 -100" fill="none" stroke-width="10" stroke="#654321"></path>   
+        <path d="M 50 400 L 100 -10" fill="none" stroke-width="5" stroke="#654321"></path>
+        <path d="M 50 400 L 100 300" fill="none" stroke-width="5" stroke="#654321"></path>
+        <path d="M 50 350 L -10 300" fill="none" stroke-width="5" stroke="#654321"></path>
+        <g transform="translate(500, 430" fill="darkgreen" stroke="green" stroke-width="20" stroke-opacity="0.8" opacity="0.7">
+            <circle cx="20" cy="70" r="20"/>
+            <circle cx="60" cy="60" r="25"/>
+            <circle cx="100" cy="40" r="25"/>
+            <circle cx="100" cy="70" r="20"/>
+            <circle cx="150" cy="70" r="15"/>
+            <circle cx="70" cy="70" r="15"/>
+        </g>
+        <g transform="translate(840, 430)" fill="darkgreen" stroke="green" stroke-width="10" stroke-opacity="0.8" opacity="0.7">
+            <circle cx="20" cy="70" r="50"/>
+            <circle cx="60" cy="60" r="25"/>
+            <circle cx="70" cy="70" r="15"/>
+            <circle cx="100" cy="40" r="25"/>
+            <circle cx="100" cy="70" r="20"/>
+            <circle cx="150" cy="70" r="15"/>
+        </g>
+    </svg>
+    </body>
+</html>
